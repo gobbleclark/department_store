@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
   before_action :set_department
   
   def index
-    binding.pry
     @items = @department.items
   end
 
@@ -48,8 +47,7 @@ class ItemsController < ApplicationController
   end
 
   def set_department
-    binding.pry
-    @department = Department.find(params[:department_id])
+  @department = Department.find(params[:department_id])
   end
 
   def item_params

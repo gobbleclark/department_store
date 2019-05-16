@@ -1,0 +1,8 @@
+<h1>Create a item</h1>
+<%= form_for [@department, @item] do |f| %>
+  <%= f.label :name %>
+  <%= f.text_area :name, required: true %>
+  <br />
+ 
+  <%= f.submit %>
+<% end %>
